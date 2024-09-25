@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4</title>
+</head>
+<body>
+    <h1>Week 4: HTML TABLE</h1>
+    <table border="1">
+        <caption>Students List at INFT1206</caption>
+        <colgroup>
+            <col style="background-color: aqua;">
+            <col style="background-color: yellow;">
+            <col>
+        </colgroup>
+        <tr>
+            <th>No.</th> <th>NAME</th> <th>PROGRAM</th>
+        </tr>
+        <tr>
+            <td>1</td> <td>Sam</td> <td rowspan="2">IT</td>
+        </tr>
+        <tr>
+            <td>2</td> <td>Tom</td> 
+        </tr> 
+        <tr>
+            <td>3</td> <td>Mia</td> <td>Programming</td>
+        </tr> 
+        <tr>
+            <td colspan="3">Andrea</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table border="1">
+                    <tr>
+                        <td>cell1</td>
+                        <td>cell2</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <td colspan="12">Data about</td>
+        </tr>
+        <tr>
+            <th colspan="2">1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+        </tr>
+        <tr>
+            <th colspan="2">1</th>
+            <th>2</th>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <th colspan="2" rowspan="4">1</th>
+            <th>2</th>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+        </tr>
+    </table>
+</body>
+</html>
