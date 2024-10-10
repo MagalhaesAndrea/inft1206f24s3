@@ -2,4 +2,19 @@ html {
     font-family: sans-serif;
   }
   
+
   /* Your CSS below here */
+  div{
+    width: 200px;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: aqua;
+    color: blue;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 10px;
+    border: 1px solid blueviolet;
+
+  }
