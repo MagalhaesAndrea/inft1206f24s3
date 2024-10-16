@@ -2,116 +2,123 @@
 
 * {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     margin: 0 auto;
     min-width: 1000px;
     max-width: 1400px;
-  }
-  
-  /* Layout */
-  
-  section {
+}
+
+/* Layout */
+
+section {
     float: left;
     width: 50%;
-  }
-  
-  aside {
+}
+
+aside {
     float: left;
     width: 30%;
-  }
-  
-  nav {
+}
+
+nav {
     float: left;
     width: 20%;
-  }
-  
-  footer {
+}
+
+footer {
     clear: both;
-  }
-  
-  header, section, aside, nav, footer {
+}
+
+header,
+section,
+aside,
+nav,
+footer {
     padding: 20px;
-  }
-  
-  /* header and footer */
-  
-  header, footer {
+}
+
+/* header and footer */
+
+header,
+footer {
     border-top: 5px solid #a66;
     border-bottom: 5px solid #a66;
-  }
-  
-  /* WRITE YOUR CODE BELOW HERE */
-  @font-face {
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+@font-face {
     font-family: 'Roboto', sans-serif;
     font-family: 'Wittgenstein', serif;
     src: ('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
-  }
+}
 
-  body {
+body {
     font-family: 'Wittgenstein', serif;
     line-height: 1.5;
     letter-spacing: 0.25rem;
     word-spacing: 0.5rem;
-  }
+}
 
-  html{
+html {
     font-size: 10px;
-  }
+}
 
-  h1, h2 {
+h1,
+h2 {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.25rem;
-  }
+}
 
-  h1{
+h1 {
     font-size: 5rem;
-  }
+}
 
-  h2{
+h2 {
     font-size: 4rem;
-  }
+}
 
-  p, li{
+p,
+li {
     font-size: 2rem;
-  }
+}
 
-  header{
+header {
     text-align: center;
-  }
+}
 
-  section h2 + p{
+section h2+p {
     text-indent: 20px;
-  }
+}
 
-  a:link{
+a:link {
     color: darkmagenta;
-  }
+}
 
-  a:visited{
+a:visited {
     color: indigo;
-  }
+}
 
-  a:hover{
+a:hover {
     color: blueviolet;
     text-decoration: none;
-  }
+}
 
-  a:focus{
-    color:darkslateblue;
+a:focus {
+    color: darkslateblue;
     text-decoration: none;
     outline: none;
-  }
+}
 
-  a:active{
+a:active {
     outline: initial;
     background-color: maroon;
     color: white;
     font-weight: bold;
-  }
+}
 
-  a.external::after{
+a.external::after {
     content: "";
     background-image: url("images/external-link-52.png");
     background-position: right;
@@ -122,24 +129,26 @@
     width: 12px;
     height: 12px;
     vertical-align: middle;
-  }
+}
 
-  li{
+li {
     list-style: circle;
-    
-  }
 
-  nav {
+}
+
+nav {
     background-color: white;
     font-family: 'Wittgenstein', serif;
     margin: 0;
 
-    }
-    nav ul{
-        text-align: center;
-        padding: 0;
-    }
-nav ul li{
+}
+
+nav ul {
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
     list-style: none;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -152,6 +161,3 @@ nav ul a {
     font-size: 2.4rem;
     border: 2px solid #a66
 }
-
-
-
