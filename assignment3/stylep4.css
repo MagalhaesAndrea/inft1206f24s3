@@ -27,6 +27,7 @@ img {
 nav {
     background-color: #000;
     padding: .5em;
+    /* navigation bar sticks to top when scrolling*/
     position: sticky;
     top: 0;
 }
@@ -35,6 +36,7 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    /* Space out navigation bar */
     display: flex;
     justify-content: space-between;
 }
@@ -49,6 +51,7 @@ nav a {
     list-style: none;
     margin: 0;
     padding: 0;
+    /* Dispaly photo in grid with 1 pixel space between - two column*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px;
@@ -56,6 +59,7 @@ nav a {
 
 .feature {
     width: 200px;
+    /* text wrap around image - push to left */
     float: left;
     margin-right: 1em;
 }
