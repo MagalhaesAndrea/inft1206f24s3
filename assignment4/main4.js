@@ -18,14 +18,24 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-class Ball {
-  constructor(x, y, velX, velY, color, size) {
+// Created class for shape that ball will derive from
+class Shape {
+  constructor(x, y, velX, velY){
     this.x = x;
     this.y = y;
     this.velX = velX;
     this.velY = velY;
+  }
+}
+
+// Ball extends shape
+class Ball extends Shape{
+  constructor(x, y, velX, velY, color, size, exists) {
+    // call the shape constructor
+    super(x, y, velX, velY)
     this.color = color;
     this.size = size;
+    this.exists = true;
   }
 
   draw() {
@@ -70,6 +80,8 @@ class Ball {
     }
   }
 }
+
+
 
 const balls = [];
 
