@@ -1,4 +1,6 @@
 // set up canvas
+let ballCount = 0;
+const countText = document.querySelector('p');
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -86,6 +88,7 @@ class Ball extends Shape{
 class EvilCircle extends Shape{
   constructor(x, y){
     super(x, y, 20, 20)
+    // set size and colour for evil circle
     this.color = "white";
     this.size = 10;
     // enables user to move the evil circle
@@ -109,6 +112,7 @@ class EvilCircle extends Shape{
 
   draw() {
     ctx.beginPath();
+    // evil circle is outlined with border
     ctx.lineWidth = 3;
     ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -116,6 +120,7 @@ class EvilCircle extends Shape{
   }
 
   checkBounds() {
+    // When hitting walls of screen minus/add shape size to keep it in window
     if (this.x + this.size >= width) {
       this.x = -this.size;
     }
@@ -144,6 +149,9 @@ class EvilCircle extends Shape{
         if (distance < this.size + ball.size) {
           // ball no longer exist if it collides with evil circle
           ball.exists = false;
+          // Delete ball from count when it is eaten by evil circle
+          ballCount--;
+          countText.textContent = `Ball Count: ${ballCount}`;
         }
       }
     }
@@ -169,17 +177,29 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  // Update total balls when balls are added
+  ballCount++;
+  countText.textContent = `Ball Count: ${ballCount}`;
 }
+
+// Create instance of evil circle
+const evilCircle = new EvilCircle(width/2, height/2);
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
+    if (ball.exists) {
     ball.draw();
     ball.update();
     ball.collisionDetect();
   }
+  }
+  // Call instance's methods
+  evilCircle.draw();
+  evilCircle.checkBounds();
+  evilCircle.collisionDetect();
 
   requestAnimationFrame(loop);
 }
